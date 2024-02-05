@@ -14,5 +14,8 @@
     "@middy/http-json-body-parser": "^5.2.3",
     "aws-sdk": "^2.1551.0",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "serverless-openapi-documentation": "^0.4.0"
   }
 }

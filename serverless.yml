@@ -12,6 +12,9 @@ provider:
         - dynamodb:*
       Resource:
         - arn:aws:dynamodb:us-east-1:590183877206:table/TaskTable
+        
+plugins:
+  - serverless-openapi-documentation
 
 functions:
   api:
@@ -26,6 +29,9 @@ functions:
       - httpApi:
           path: /tasks
           method: post
+          documentation:
+            summary: "Create new task"
+            description: "Creates a task with body {title, description}"
   getTasks:
     handler: src/getTasks.getTasks
     events:
@@ -57,3 +63,10 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH
+	
+custom:
+  documentation:
+    version: '1'
+    title: 'My API AWS LAMBDA DYNAMODB'
+    description: 'Esta es una demo para un reto softek'
+
