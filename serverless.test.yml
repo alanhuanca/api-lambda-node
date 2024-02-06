@@ -1,0 +1,7 @@
+- name: get mensaje
+  endpoint:
+    function: api
+  response:
+    status: 200
+    body: 
+      message: Api softek

@@ -1,7 +1,7 @@
 
 const getSwapi = async (event) => {
 
-  const result = await fetch('https://swapi.py4e.com/api/people');
+  const result = await fetch(process.env.URL_SWAPI);
 
   const items = await result.json();
   let persons=items.results;
